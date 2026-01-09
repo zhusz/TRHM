@@ -1,0 +1,9 @@
+from .config_S58Pointk8L112V100bszhNeurecon import getConfigFunc as getConfigFuncParent
+
+
+def getConfigFunc(P, D, S, R, **kwargs):
+    config = getConfigFuncParent(P, D, S, R, **kwargs)
+
+    config.datasetConfDict["renderingNerfBlender58Pointk8L112V100"]["debugReadTwo"] = True
+
+    return config
